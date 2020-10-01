@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Drag n Drop</title>
+    <link rel="stylesheet" href="main.css">
+
+</head>
+<body>
+
+<div class="app" id="container">
+    <header class="headerClass" >
+        <a class="button" ><img src="image.png" height="35" width="33" style="position: relative; bottom: 1px"/></a>
+        <button class="button" style="border: none;background: none; font-size: 20px">CodeGym Ken</button>
+        <button class="button" style="border: none;background: none; font-size: 20px; margin-left: 15px">Templates</button>
+        <button class="button" id="name" style="font-size: 14px; margin-left: auto; padding-right: 15px">Nguyễn Minh Đức</button>
+
+    </header>
+    <div class="bootcampPrep" style="height: 36px">
+        <p style="font-size: 20px;color:white; padding-left: 15px">[BC-JAVA] Bootcamp Preparation 2.0</p>
+    </div>
+    <div id="week1">
+        <div class="week1Tab" onclick="showAndHide()" >
+            <p><i class="arrow down"></i></p>
+            <p>Week 1</p>
+        </div>
+        <div class="lists">
+            <div class="list"  id="list1">
+                <p style="font-size: 19px; font-weight: bold;margin-bottom: 10px">Backlog (3)</p>
+
+                <div class="openPopup" id="openPopup" onclick="openPopup()" > Add a card</div>
+                <div class="form-popup" id="myForm">
+                    <textarea class="createNewListItem" id="addNewListItem" placeholder="Enter to add new task"></textarea><br>
+                    <button onclick="createNewItemLists()">Create Item</button>
+                    <button onclick="closeForm()" id="">X</button>
+                </div>
+                <p id="newCard"></p>
+
+            </div>
+
+
+
+            <div class="list" id="list2"></div>
+            <div class="list"  id="list3"></div>
+        </div>
+    </div>
+
+</div>
+
+<div id="myModal" class="modal">
+    <div class="modalContent">
+        <div class="modal-header">
+            <p id="modalHeaderContent"></p>
+        </div>
+        <div class="ModalBody">
+
+        </div>
+    </div>
+</div>
+<div id="overlay"></div>
+
+</div>
+<script src="main.js"></script>
+</body>
+</html>
